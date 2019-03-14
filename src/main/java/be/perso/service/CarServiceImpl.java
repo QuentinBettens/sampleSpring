@@ -8,9 +8,13 @@ import java.util.List;
 
 public class CarServiceImpl implements CarService {
 
-    private CarRepository carRepository = new CarRepositoryImpl();
+    private CarRepository carRepository;
 
     public List<Car> findAll() {
         return carRepository.findAll();
+    }
+
+    public void setCarRepository(CarRepository carRepository) {
+        this.carRepository = carRepository;
     }
 }

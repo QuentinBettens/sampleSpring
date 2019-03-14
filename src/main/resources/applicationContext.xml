@@ -4,5 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean name="carRepository" class="be.perso.repository.CarRepositoryImpl"/>
-    <bean name="carService" class="be.perso.service.CarServiceImpl"/>
+    <bean name="carService" class="be.perso.service.CarServiceImpl" >
+        <property name="carRepository" ref="carRepository"/>
+    </bean>
 </beans>

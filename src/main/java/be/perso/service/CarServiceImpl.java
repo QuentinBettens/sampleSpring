@@ -7,13 +7,16 @@ import java.util.List;
 
 public class CarServiceImpl implements CarService {
 
+    public CarServiceImpl() {}
+
+    public CarServiceImpl(CarRepository carRepository) {
+        this.carRepository = carRepository;
+    }
+
     private CarRepository carRepository;
 
     public List<Car> findAll() {
         return carRepository.findAll();
     }
 
-    public void setCarRepository(CarRepository carRepository) {
-        this.carRepository = carRepository;
-    }
 }

@@ -5,6 +5,6 @@
 
     <bean name="carRepository" class="be.perso.repository.CarRepositoryImpl"/>
     <bean name="carService" class="be.perso.service.CarServiceImpl" >
-        <property name="carRepository" ref="carRepository"/>
+        <constructor-arg index="0" ref="carRepository"/>
     </bean>
 </beans>
